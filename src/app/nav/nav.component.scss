@@ -1,0 +1,43 @@
+
+.navbar{
+    .navbar-brand{
+        font-size: 30px;
+        font-family: 'Raleway-semiBold';
+        color: gray;
+    }
+    .nav{
+        .nav-item{
+
+            a{
+                color:gray;
+                font-family: 'Raleway-semiBold';
+                cursor: pointer;
+            }
+            .active-link{
+                color: rgb(149, 193, 71);
+            }
+            
+        }
+      
+    }
+    .userMenu{
+        margin:0 20px 10px 5px;
+        .nav-item{
+            mat-icon{
+                img{
+                    width:35px;
+                    border-radius: 20px;
+                }
+            }
+        }
+        .bell{
+            margin: 0 25px 0 0;
+            mat-icon{
+                img{
+                    width:25px;
+                    border-radius: 20px;
+                }
+            }
+        }
+    }
+}

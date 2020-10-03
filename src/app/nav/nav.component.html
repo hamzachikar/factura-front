@@ -1,0 +1,56 @@
+<nav class="navbar  fixed-top navbar-expand-lg navbar-light bg-light">
+    <a *ngIf="!user" class="navbar-brand" href="#">Factura</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="nav" *ngIf="!user">
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active-link" routerLink="home">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active-link" routerLink="about">About Us</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" routerLinkActive="active-link" routerLink="service">Services</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active-link" (click)="checkRoute()">Pricing</a>
+        </li>
+       
+        <li class="nav-item">
+            <a class="nav-link" routerLinkActive="active-link" (click)="scrollDown()" >Contact</a>
+        </li>
+        <li class="nav-item" *ngIf="!user">
+            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#loginPage">Get started</button>
+        </li>
+        
+      </ul>
+      <ul class="nav userMenu" *ngIf="user">
+        <li class="nav-item bell">
+          <mat-icon [matMenuTriggerFor]="notifMenu">
+            <img src="../../assets/images/notification.png" alt="" srcset="">
+          </mat-icon>
+          <mat-menu #notifMenu="matMenu" xPosition="before">
+            <button mat-menu-item>Item 1</button>
+            <button mat-menu-item>Item 2</button>
+          </mat-menu>
+        </li>
+        <li class="nav-item">
+          <mat-icon [matMenuTriggerFor]="profilMenu">
+            <img *ngIf="!user.user.avatar" src="../../assets/images/amjad.jpg" alt="" srcset="">
+            <img *ngIf="user.user.avatar" [src]='userAvatar' alt="" srcset="">
+          </mat-icon>
+          <mat-menu #profilMenu="matMenu" xPosition="before">
+            <h3 class="dropdown-item disabled">{{user.user.name}}</h3>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" data-toggle="modal" data-target="#profile">Profile</a>
+              <a href="#" class="dropdown-item">Settings</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" (click)="logout()">Logout</a>
+          </mat-menu>
+        </li>
+      </ul>
+    </div>
+  
+</nav> 

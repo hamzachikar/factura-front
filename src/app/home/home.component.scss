@@ -1,0 +1,143 @@
+
+.scrolBtn{
+    position: fixed;
+    bottom: 2%;
+    right: 2%;
+    z-index: 100;
+    .btn{
+        background-color: rgba(128, 255, 0, 0.459);
+        border: transparent;
+        transition: 0.5s;
+    }
+    .btn:hover{
+        transition: 1s;
+        background-color: chartreuse;
+    }
+}
+.topNav{
+    position: fixed;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    z-index: 100;
+}
+.container-fluid{
+    height: fit-content;
+    margin: 0;
+    padding: 0;
+   
+  
+    .rowRouter{
+        position: relative;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: fit-content;
+    }
+    .rowFooter{
+        position: relative;
+        margin-top: 20px;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        height: fit-content;
+        background-color: rgb(28, 31, 24);
+        .row{
+            margin: 0;
+            padding: 0;
+        }
+        .content{
+            height: fit-content;
+            margin: 0;
+            padding: 0;
+            .contactRow{
+                position: relative;
+                width: 90%;
+                left: 5%;
+                height: fit-content;
+                .col{
+                    min-height: 350px;
+                    height: fit-content;
+                    .contentCol{
+                        margin-top: 20%;
+                    }
+                }
+                .resumeCol{
+                    .contentCol{
+                        h1{
+                            font-family:'Raleway-semiBold' ;
+                            color: rgb(149, 193, 71);
+                            font-size: 50px;
+                        }
+                        p{
+                            margin-top: 15%;
+                            color: white;
+                            font-family:'Raleway-medium';
+                        }
+                    }
+                   
+                }
+                .sep{
+                    .contentCol{
+                        .titleCol{
+                            h3{
+                                color: white;
+                                font-family: 'Raleway-medium';
+                            }
+                        }
+                        .separator{
+                           width: 80%;
+                           background-color: rgb(47, 53, 40);
+                           height: 3px;
+                            .s{
+                                width: 25%;
+                                background-color: rgb(149, 193, 71);
+                                height: 100%;
+                            }
+                            margin-bottom: 25px;
+                        }
+                    
+                    }
+                }
+                .menuCol{
+                    .contentCol{
+                        .nav{
+                            .nav-link{
+                                color: white;
+                            }
+                        }
+                    }
+                }
+                .contactCol{
+                    .contentCol{
+                        .contact{
+                            h4{
+                                color: white;
+                                span{
+                                    color: rgb(149, 193, 71);
+                                    font-weight: 550;
+                                }
+                            }
+                            .row{
+                                margin-top: 20px;
+                                .col{
+                                    height: fit-content;
+                                    min-height: fit-content;
+                                    i{
+                                        color: white;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .socialRow{
+                width: 100%;
+                height: 100px;
+                background-color: black;
+            }
+        }
+    }
+ 
+}

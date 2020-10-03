@@ -1,0 +1,23 @@
+<div class="modal fade" id="loginPage" aria-labelledby="login" aria-hidden="true" >
+    <div class="modal-dialog modal-xl" >
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="close">
+            <button  #loginModal type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <login (closeModal)="closeModalLogin()"></login>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="profile" aria-labelledby="profile" aria-hidden="true" >
+    <div class="modal-dialog modal-lg" >
+      <div class="modal-content">
+        <div class="modal-body">
+         <profile></profile>
+        </div>
+      </div>
+    </div>
+  </div>

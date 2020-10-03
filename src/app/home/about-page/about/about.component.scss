@@ -1,0 +1,53 @@
+
+.container{
+    width: 100%;
+    .card{
+        width: 100%;
+        margin-bottom: 50px;
+        min-height: 500px;
+        -webkit-box-shadow:0 10px 70px rgba(0, 0, 0, 0.459), 0 0 1px rgba(255, 255, 255, 0.514) inset;
+           -moz-box-shadow:0 10px 70px rgba(255, 255, 255, 0.459), 0 0 1px rgba(255, 255, 255, 0.514) inset;
+            box-shadow:0 10px 50px rgba(0, 0, 0, 0.459), 0 0 0 rgba(255, 255, 255, 0.514) inset;
+        .row{
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: fit-content;
+        }
+        .topRow{
+            .col{
+                height:150px;
+                .row{
+                    .col{
+                        margin: 0;
+                        padding: 0;
+                        i{
+                            color: rgb(149, 193, 71);
+                            font-weight: 500;
+                        }
+                        h2{
+                            font-family: 'Raleway-semiBold';
+                            margin: 0;
+                            padding: 0;
+                            width: fit-content;
+                        }
+                    }
+                }
+            }
+        }
+        .bottomRow{
+            margin-top: 15px;
+            .col{
+                height: 400px;
+                border: 1px solid white;
+                img{
+                    width: 100%;
+                }
+            }
+            .col-lg-5{
+                background-color: rgba(148, 193, 71, 0.322);
+            }
+        }
+    }
+}
+

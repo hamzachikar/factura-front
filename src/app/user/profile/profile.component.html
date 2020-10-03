@@ -1,0 +1,33 @@
+<div class="container-fluid">
+    <div class="row justify-content-center">
+    
+        <div class="col col-lg-20 align-self-center">
+            <div class="card profile-card-1">
+                <img src="../../../assets/images/ocean.jpeg" alt="profile-sample1" class="background"/>
+            
+                <img src="../../../assets/images/hamza.jpg" alt="profile-image" class="profile"/>
+                <div class="card-content" *ngIf="user">
+                    <h2>{{user.user.name}}<small>{{user.user.role}}</small></h2>
+                    <div class="row rowDetails justify-content-center">
+                        <div class="col col-lg-8">
+                            <div class="row emailRow">
+                                <p><span>Email : </span>{{user.user.email}}</p>
+                            </div>
+                            <div class="row phoneRow">
+                                <p><span>Phone : </span> {{user.user.phone}}</p>
+                            </div>
+                            <div class="row cinRow">
+                                <p><span>CIN : </span>{{user.user.cin}}</p>
+                            </div>
+                            <div class="row specRow">
+                                <p><span>Specialty : </span>{{user.user.specialty}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+       
+    </div>
+</div>
+

@@ -1,0 +1,77 @@
+.container-fluid{
+    position: relative;
+    min-height: 700px;
+    height: fit-content;
+    overflow: hidden;
+    margin: 0;
+    margin-top: 50px;
+    padding: 0;
+    .row{
+        position: relative;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .titleRow{
+        .col{
+            h2{
+               font-family: 'Raleway-semiBold'; 
+            }
+        }
+    }
+    .card{
+        -webkit-box-shadow:0 10px 10px rgba(0, 0, 0, 0.459), 0 0 1px rgba(255, 255, 255, 0.514) inset;
+        -moz-box-shadow:0 10px 10px rgba(255, 255, 255, 0.459), 0 0 1px rgba(255, 255, 255, 0.514) inset;
+         box-shadow:0px 5px 15px rgba(0, 0, 0, 0.459), 0 0 0 rgba(255, 255, 255, 0.514) inset;
+    }
+    .r1{
+        min-height: 350px;
+        height: fit-content;
+        
+        .leftCol{
+            margin: 0;
+            padding: 0;
+            .row{
+                height: 50%;
+                .col{
+                    min-width: fit-content;
+                    min-height: fit-content;
+                    .card{
+                        margin-top: 20px;
+                        border: transparent;
+                        .card-body{
+                            position: relative;
+                            top: 15%;
+                            height: fit-content;
+                            .icon{
+                                float: right;
+                                padding: 10px;
+                                background-color: rgba(58, 58, 250, 0.473);
+                                border-radius: 10px;
+                                i{
+                                    color: rgba(0, 0, 255, 0.548);
+                                    font-size: 30px;
+                                }
+                            }
+                            .titleCard{
+                                font-family: 'Raleway-semiBold';
+                                font-size: 19px;
+                            }
+                            .nbrC{
+                                font-weight: 500;
+                                font-size: 50px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .rightCol{
+            min-height: fit-content;
+            .card{
+                position: relative;
+                height: fit-content;
+            }
+        }
+    }
+}

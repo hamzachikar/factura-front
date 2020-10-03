@@ -1,0 +1,113 @@
+
+.container-fluid{
+    height: fit-content;
+    margin: 0;
+    padding: 0;
+    .row{
+        margin: 0;
+        padding: 0;
+    }
+    .aboutIntro{
+        width: 100%;
+        min-height: 400px;
+        height: fit-content;
+        margin-bottom: 50px;
+        background-color:  rgb(149, 193, 71);
+        .col{
+            top: 130px;
+            text-align: center;
+            color: white;
+            h1{
+                font-family: 'Raleway-semiBold';
+                font-size: 60px;
+            }
+            p{
+                font-family: 'Raleway-medium';
+                margin-top: 40px;
+                font-size: 15px;
+                line-height: 23px;
+            }
+        }
+    }
+    .aboutCard{
+        position: relative;
+        height: fit-content;
+        min-height: 500px;
+        margin: 0;
+        padding: 0;
+       
+    }
+    .aboutTitle{
+        margin-top: 50px;
+        margin-bottom: 50px;
+        h1{
+            font-family: 'Raleway-semiBold';
+            color: gray;
+            font-size: 50px;
+        }
+    }
+    .aboutTeam{
+        position: relative;
+        left: 10%;
+        width: 80%;
+        height: fit-content;
+        margin: 100px 0 100px 0;
+        .col{
+            margin-bottom: 25px;
+            margin-top: 25px;
+            .row{
+                margin: 0;
+                padding: 0;
+            }
+            .image{
+                img{
+                    width: 200px;
+                    border-radius: 100px;
+                    border: 1px solid rgba(0, 0, 0, 0.397);
+                    -webkit-box-shadow:0 10px 70px rgba(0, 0, 0, 0.459), 0 0 1px rgba(255, 255, 255, 0.514) inset;
+                -moz-box-shadow:0 10px 70px rgba(255, 255, 255, 0.459), 0 0 1px rgba(255, 255, 255, 0.514) inset;
+                 box-shadow:0 10px 50px rgba(0, 0, 0, 0.678), 0 0 0 rgba(255, 255, 255, 0.514) inset;
+                }
+            }
+            .name{
+                margin-top: 20px;
+                height: fit-content;
+                h1{
+                    font-family: 'Raleway-semiBold';
+                    color: gray;
+                    font-size: 25px;
+                }
+            }
+            .detail{
+                position: relative;
+                p{
+                    font-family:'Raleway-medium' ;
+                }
+            }
+        }
+    }
+    .aboutWork{
+        
+        .col{
+           
+            .row{
+                .col{
+                    min-height: 400px;
+                    img{
+                        width: 100%;
+                    }
+                    h1{
+                        font-family:'Raleway-semiBold' ;
+                        font-size: 30px;
+                    }
+                    p{
+                        font-family: 'Raleway-medium';
+                        margin-top: 40px;
+                        font-size: 15px;
+                        line-height: 23px;
+                    }
+                }
+            }
+        }
+    }
+}

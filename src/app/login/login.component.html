@@ -1,0 +1,56 @@
+<div class="container-fluid">
+  <div class="row content justify-content-center">
+
+    <div *ngIf="isLoading" class="cardForm col  col-sm-15 align-self-center">
+      <div class="row spinnerRow justify-content-center align-items-center">
+        <mat-spinner></mat-spinner>
+      </div>
+    </div>
+    <div *ngIf="!isLoading" class="cardForm col col-sm-15 align-self-center">
+      <div class="row topRow justify-content-center align-items-center">
+        <div class="avatar col">
+           <img src="../../assets/images/user.png" alt="">
+        </div> 
+      </div>
+      <div class="row formRow justify-content-center align-items-center">
+        
+        <form  autocomplete="off" #authForm="ngForm" (ngSubmit)="onSubmit(authForm)">
+          <div class="form-group">
+            <mat-form-field  appearance="outline">
+              <mat-label>Email</mat-label>
+              <input 
+                matInput
+                ngModel
+                type="email"
+                name="email" 
+                id="email"  
+                required
+                email
+                >
+              <mat-icon matSuffix>alternate_email</mat-icon>
+            </mat-form-field>
+          </div>
+          <div class="form-group">
+            <mat-form-field appearance="outline">
+              <mat-label>Password :</mat-label>
+              <input 
+                matInput  
+                type="password" 
+                id="password" 
+                ngModel
+                name="password"
+                required
+                minlength="6"
+                >
+              <mat-icon matSuffix>lock</mat-icon>
+            </mat-form-field>
+          </div> 
+          <div>
+            <button mat-raised-button color="primary" type="submit">Sign in</button>
+          </div>
+        </form>
+        
+      </div>
+    </div>
+  </div> 
+</div>

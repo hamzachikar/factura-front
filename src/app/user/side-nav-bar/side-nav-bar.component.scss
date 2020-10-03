@@ -1,0 +1,56 @@
+.sideNav{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    height: 100%;
+    background-color: rgb(50, 59, 71);
+    .navbar-brand{
+        font-size: 30px;
+        background-color: bla;
+        width: 100%;
+        height: 10%;
+        padding-top: 15px;
+        text-align: center;
+        margin: 0;
+        font-family: 'Raleway-semiBold';
+        color: white;
+    }
+    .navbar-nav{
+        width: 100%;
+        height: 90%;
+        .nav-item{
+           a{
+               .cNav{
+                   display: inline;
+                   vertical-align: middle;
+               }
+               i{
+                display: inline-block;
+                line-height: 1.0625rem;
+                margin: 0 10px 0 0;
+                font-size: 1.1rem;
+                width: 20px;
+               }
+            color: #cedce4;
+            display: block;
+            padding: 10px 30px;
+            font-size: .9375rem;
+            position: relative;
+            -webkit-transition: all .4s;
+            transition: all .4s;
+           }
+        }
+        .title{
+            padding: 12px 30px;
+            letter-spacing: 0.05em;
+            pointer-events: none;
+            cursor: default;
+            font-size: 0.6875rem;
+            text-transform: uppercase;
+            color: #cedce4;
+            font-weight: 500;
+        }
+    }
+   
+}

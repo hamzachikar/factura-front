@@ -1,0 +1,67 @@
+<div class="scrolBtn">
+  <button type="button" (click)="onScrollTop()" class="btn btn-lg btn-success">
+      <i class="fa fa-chevron-up" aria-hidden="true"></i>
+  </button>
+</div>
+<div class="topNav container-fluid">
+  <navBar (scroll)="scrollDown()"></navBar>
+</div>
+<div class="container-fluid" #body>
+    <div class="rowRouter">
+      <router-outlet></router-outlet>
+    </div>
+    <div class="row rowFooter justify-content-center" data-aos="fade-up" data-aos-duration="700">
+      <div class="col content">
+        <div class="row contactRow  row-cols-1 row-cols-lg-3 ">
+          <div class="col resumeCol col-lg-3">
+            <div class="contentCol">
+              <h1>Factura</h1>
+              <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus. Scelerisque felis imperdiet proin fermentum leo. Amet volutpat consequat mauris nunc congue.</p>  
+            </div>
+           </div>
+          <div class="col sep menuCol col-lg-3">
+            <div class="contentCol">
+              <div class="titleCol">
+                <h3>Useful links:</h3>
+              </div>
+              <div class="separator">
+                <div class="s"></div>
+              </div>
+              <div class="nav flex-column " aria-orientation="vertical">
+                <a class="nav-link" routerLink="home" >Home</a>
+                <a class="nav-link" routerLink="about">About us</a>
+                <a class="nav-link" href="#">Services</a>
+                <a class="nav-link" href="#">Team</a>
+              </div>
+            </div>
+            
+          </div>
+          <div class="col sep contactCol col-lg-3">
+            <div class="contentCol">
+              <div class="titleCol">
+                <h3>Contact Us:</h3>
+              </div>
+              <div class="separator">
+                <div class="s"></div>
+              </div>
+              <div class="contact">
+                <h4>Askjour housna 2 nr 1045 Marrakech, Maroc</h4>
+                <h4><span>Phone:  </span>  0524371959</h4>
+                <h4><span>Email:  </span>  factura@gmail.com</h4>
+                <div class="row">
+                  <div class="col"><i class="fa fa-3x fa-facebook-official" aria-hidden="true"></i></div>
+                  <div class="col"><i class="fa fa-3x fa-instagram" aria-hidden="true"></i></div>
+                  <div class="col"><i class="fa  fa-3x fa-linkedin-square" aria-hidden="true"></i></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col  col-lg-3"></div>
+        </div>
+        <div class="row socialRow">
+
+        </div>
+      </div>
+    </div>
+   
+</div>

@@ -1,0 +1,150 @@
+@font-face{
+    font-family: 'Raleway-semiBold';
+    src: url(../../../assets/fonts/Raleway-SemiBold.ttf);
+}
+@font-face{
+    font-family: 'Raleway-medium';
+    src: url(../../../assets/fonts/Raleway-Medium.ttf);
+}
+.container-fluid{
+    height: fit-content;
+    margin: 0;
+    padding: 0;
+    h1{
+        font-family: 'Raleway-semiBold';
+        color: gray;
+    }
+    p{
+        font-family: 'Raleway-medium';
+    }
+    .row{
+        margin: 0;
+        padding: 0;
+    }
+    .serviceIntro{
+        width: 100%;
+        min-height: 400px;
+        height: fit-content;
+        margin-bottom: 50px;
+        background-color:  rgb(149, 193, 71);
+        .col{
+            top: 130px;
+            text-align: center;
+           
+            h1{
+                font-size: 60px;
+                color: white;
+            }
+            p{
+                color: white;
+                margin-top: 40px;
+                font-size: 15px;
+                line-height: 23px;
+            }
+        }
+    }
+    .serviceCard{
+        position: relative;
+        height: fit-content;
+        min-height: 500px;
+        margin: 0;
+        padding: 0;
+       
+    }
+    .featureTitle{
+        margin-top: 50px;
+        margin-bottom: 30px;
+        h1{
+            font-size: 50px;
+        }
+    }
+
+    .featureDetail{
+        width: 100%;
+        .col{
+            .featureText{
+                position: relative;
+                width: 80%;
+                left: 10%;
+                p{
+                    text-align: center;
+                }
+            }
+            .featureCard{
+                position: relative;
+                width: 80%;
+                left: 10%;
+                margin-top: 30px;
+                .cardContainer{
+                    position: relative;
+                    margin-bottom: 50px;
+                    .card{
+                        transition: 0.5s;
+                        border: 0;
+                        padding: 160px 20px 20px 20px;
+                        position: relative;
+                        width: 100%;
+                        background-image: url(../../../assets/images/wallEcom.jpg);
+                        background-size: cover;
+                        background-repeat: no-repeat;
+                        background-position: center center;
+                        -webkit-box-shadow:0 10px 50px rgba(0, 0, 0, 0.459), 0 0 1px rgba(255, 255, 255, 0.514) inset;
+                        -moz-box-shadow:0 10px 50px rgba(255, 255, 255, 0.459), 0 0 1px rgba(255, 255, 255, 0.514) inset;
+                         box-shadow:0 10px 50px rgba(0, 0, 0, 0.459), 0 0 0 rgba(255, 255, 255, 0.514) inset;
+                        .card-body{
+                            background: rgba(255, 255, 255, 0.9);
+                            padding: 15px 30px;
+                            box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+                            transition: 0.3s;
+                            transition: ease-in-out 0.4s;
+                            border-radius: 5px;
+                            .card-title {
+                                transition:0.5s;
+                                font-family: 'Raleway-semiBold';
+                                font-size: 25px;
+                                text-align: center;
+                                margin-bottom: 15px;
+
+                            }
+                            .card-text {
+                                color: #5e5e5e;
+                            }
+                            .read-more{
+                                *{
+                                    transition: 0.5s;
+                                    color:#5e5e5e ;
+                                    text-decoration: none;
+                                    
+                                }
+                               a{
+                                font-family:'Raleway-medium' ;
+                               }
+                            }
+                        }
+                    }
+                    .card:hover{
+                        transform: scale(1.009);
+                        transition: 1s;
+                        -webkit-box-shadow:0 10px 100px  rgba(0, 0, 0, 0.753), 0 0 1px rgba(255, 255, 255, 0.514) inset;
+                        -moz-box-shadow:0 10px 100px rgba(0, 0, 0, 0.753), 0 0 1px rgba(255, 255, 255, 0.514) inset;
+                         box-shadow:0 10px 100px rgba(0, 0, 0, 0.753), 0 0 0 rgba(255, 255, 255, 0.514) inset;
+                        .card-body{
+                            .card-title {
+                                transition: 1s;
+                                color: rgb(149, 193, 71);
+                            }
+                            .read-more{
+                                *{
+                                    transition: 1s;
+                                    color:rgb(149, 193, 71);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+  
+    
+}
