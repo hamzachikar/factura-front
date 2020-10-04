@@ -67,7 +67,7 @@ import { TestComponent } from './user/test/test.component';
     MatSnackBarModule,
     MatSidenavModule,
     MatMenuModule,
-    ChartsModule
+    ChartsModule,
   ],
   providers: [{provide:HTTP_INTERCEPTORS,useClass:AuthIntercpetorService,multi:true}],
   bootstrap: [AppComponent]

@@ -38,9 +38,9 @@
         </li>
         <li class="nav-item">
           <mat-icon [matMenuTriggerFor]="profilMenu">
-            <img *ngIf="!user.user.avatar" src="../../assets/images/amjad.jpg" alt="" srcset="">
+            <i *ngIf="!user.user.avatar" class="fa fa-user-circle"></i>
             <img *ngIf="user.user.avatar" [src]='userAvatar' alt="" srcset="">
-          </mat-icon>
+          </mat-icon> 
           <mat-menu #profilMenu="matMenu" xPosition="before">
             <h3 class="dropdown-item disabled">{{user.user.name}}</h3>
               <div class="dropdown-divider"></div>

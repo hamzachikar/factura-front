@@ -6,6 +6,7 @@ export class User{
         public phone:string,
         public role:string,
         public cin:string,
+        public password:string,
         public specialty:string,
         public avatar:any
     ){}
