@@ -28,6 +28,7 @@ export class AuthService{
         this.userService.getUsers();
         this.productService.getProducts();
         this.devisService.getDevis()
+        this.router.navigate(['/app/dash']);
     }
     logout(){
         this.user.next(null);

@@ -1,0 +1,44 @@
+.container-fluid{
+    position: relative;
+    width: 100%;
+    .navbar{
+        height:70px;
+        .nav{
+            .btn{
+                .fa{
+                    span{
+                        font-family: 'Raleway-bold';
+                        font-size: 20px;
+                    }
+                   
+                }
+            }
+        }
+    }
+    table {
+        position: relative;
+        width: 97%;
+        left: 1.5%;
+        span{
+            .dot{
+                display: block;
+                font-weight: 900;
+                display: inline;
+            }
+        }
+        th{
+            text-align: center;   
+        }
+        td{
+            text-align: center;
+            font-family: 'Raleway-semiBold';
+            font-size: 15px;
+            .avatar{
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                margin-right: 20px;
+            }
+        }
+      }
+}

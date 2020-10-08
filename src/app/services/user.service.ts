@@ -14,4 +14,10 @@ export class UserService {
       this.users.next(res);
     });
   }
+  public saveProfile(user:User,selectedFile:File){
+    let formData = new FormData();
+    formData.append('image', selectedFile);
+    formData.append('user',  JSON.stringify(user))
+    return this.http.post<User>(HTTP_START+'user/profile',formData);
+  }
 }

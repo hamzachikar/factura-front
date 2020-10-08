@@ -45,7 +45,7 @@ export class LoginComponent implements OnInit{
     authObs.subscribe(resData=>{
       console.log(resData);
       this.isLoading=false;
-      this.route.navigate(['/home']);
+      this.route.navigate(['/app/dash']);
       form.reset();
       this.closeModal.emit(true);
     },error=>{

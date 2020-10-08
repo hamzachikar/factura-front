@@ -1,15 +1,17 @@
 <div class="container-fluid">
     <div class="row justify-content-center">
-    
+     
         <div class="col col-sm-15 align-self-center">
-            <div class="card profile-card-1">
+            <div class="card profile-card-1" *ngIf="auth">
                 <img src="../../../assets/images/ocean.jpeg" alt="profile-sample1" class="background"/>
-                <div class="profileImg">
-                  <div class="changeImg">
-                  </div>
-                  <img *ngIf="user.user.avatar" src="../../../assets/images/hamza.jpg" alt="profile-image" class="profile"/>
-                  <img *ngIf="!user.user.avatar" src="../../../assets/images/user1.png" alt="profile-image" class="profile"/>
-                  
+                <div class="profileImg align-self-center">
+                  <img *ngIf="user.user.avatar" [src]="transform(user.user.avatar)" alt="profile-image" class="main-profile-img"/>
+                  <img *ngIf="!user.user.avatar && !selectedImg" src="../../../assets/images/user1.png" alt="profile-image" class="main-profile-img"/>
+                  <img *ngIf="!user.user.avatar && selectedImg" [src]="selectedImg" alt="profile-image" class="main-profile-img"/>
+                  <label for="upload">
+                    <i class="fa fa-edit" for="upload" aria-hidden="true"></i>
+                     <input type="file" id="upload" (change)="onFileChanged($event)" name="file"> 
+                  </label>
                 </div>
                 <div class="card-content" *ngIf="user">
                     <h2>{{user.user.name}}<small>{{user.user.role}}</small></h2>

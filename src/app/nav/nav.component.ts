@@ -15,8 +15,10 @@ export class NavComponent implements OnInit {
   userAvatar:any;
   constructor(private authService:AuthService,private router:Router,private sanitizer:DomSanitizer) { 
     this.authService.user.subscribe(user=>{
-      this.user=user;
+      if(user){
+        this.user=user;
       this.userAvatar=this.transform(this.user.user.avatar);
+      }
     });
   }
 

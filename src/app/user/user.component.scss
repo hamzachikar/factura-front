@@ -1,18 +1,4 @@
-.appContainer{
-    position: relative;
-    overflow: auto;
-    height:fit-content !important;
-    .sideNavContainer{
-        position: fixed;
-        height: 100%;
-    }
-    .contentContainer{
-        .container-fluid{
-            margin: 0;
-            padding: 0;
-        }
-       .navBar{
-        box-shadow: 0 8px 6px -6px black;
-       }
-    }
+.mat-drawer-container{
+    
+    height: 100%;
 }

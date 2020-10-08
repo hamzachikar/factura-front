@@ -8,6 +8,7 @@ export class User{
         public cin:string,
         public password:string,
         public specialty:string,
+        public active:boolean,
         public avatar:any
     ){}
    
