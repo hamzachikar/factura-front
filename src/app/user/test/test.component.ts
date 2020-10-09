@@ -12,7 +12,11 @@ export class TestComponent implements OnInit {
   user:User=null;
   picByte:any;
   constructor(private http:HttpClient,private authService:AuthService) {
-    this.authService.user.subscribe(user=>this.user=user.user);
+    this.authService.user.subscribe(user=>{
+      if(user){
+        this.user=user.user
+      }
+    });
    }
 
   ngOnInit(): void {

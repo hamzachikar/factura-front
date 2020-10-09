@@ -1,0 +1,27 @@
+.navbar{
+    .nav{
+        .nav-item{
+            
+            .btn{
+                transition: 0.5s;
+                background-color: rgb(213, 220, 225);
+                border: 1px solid transparent;
+                color: black;
+                .name{
+                    font-family: 'Raleway-bold';
+                    font-size: 15px;
+                    margin-left: 10px;
+                }
+                img{
+                    width: 25px;
+                    height: 25px;
+                    border-radius: 50%;
+                }
+            }
+            .btn:hover{
+                transition: 0.5s;
+                background-color: rgba(128, 128, 128, 0.747);
+            }
+        }
+    }
+}

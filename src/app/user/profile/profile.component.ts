@@ -58,7 +58,8 @@ export class ProfileComponent implements OnInit {
         this.signupForm.get('userData').get('password').value,
         this.signupForm.get('userData').get('specialty').value,
         this.signupForm.get('userData').get('active').value,
-        null
+        null,
+        this.user.user.adminUser
       );
      this.userService.saveProfile(user,this.seletedFile).subscribe(
        res=>{

@@ -9,7 +9,8 @@ export class User{
         public password:string,
         public specialty:string,
         public active:boolean,
-        public avatar:any
+        public avatar:any,
+        public adminUser?:User
     ){}
    
 }

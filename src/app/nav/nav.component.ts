@@ -13,27 +13,12 @@ export class NavComponent implements OnInit {
   @Output() scroll:EventEmitter<boolean>=new EventEmitter();
   user:AuthResponse=null;
   userAvatar:any;
-  constructor(private authService:AuthService,private router:Router,private sanitizer:DomSanitizer) { 
-    this.authService.user.subscribe(user=>{
-      if(user){
-        this.user=user;
-      this.userAvatar=this.transform(this.user.user.avatar);
-      }
-    });
-  }
+  constructor() { }
 
   ngOnInit(): void {
   }
   scrollDown(){
     this.scroll.emit();
   }
-  logout(){
-    this.authService.logout();
-  }
-  checkRoute(){
-    console.log(this.router.url);
-  }
-  transform(res:any){
-    return this.sanitizer.bypassSecurityTrustResourceUrl( 'data:image/png;base64,'+res);
-}
+
 }

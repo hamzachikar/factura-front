@@ -24,11 +24,10 @@ export class AuthService{
         private devisService:DevisService
         ){}
     private loadAuthUserData(){
-        this.clientService.getClients();
         this.userService.getUsers();
+        this.clientService.getClients();
         this.productService.getProducts();
         this.devisService.getDevis()
-        this.router.navigate(['/app/dash']);
     }
     logout(){
         this.user.next(null);

@@ -29,12 +29,12 @@ import { WelcomeComponent } from './user/welcome/welcome.component';
 import { SideNavBarComponent } from './user/side-nav-bar/side-nav-bar.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatMenuModule} from '@angular/material/menu';
-import { ChartsModule } from 'ng2-charts';
 import { LineChartComponent } from './user/welcome/line-chart/line-chart.component';
 import { TestComponent } from './user/test/test.component';
 import { UserGestComponent } from './user/admin/user-gest/user-gest.component';
 import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
+import { UserNavComponent } from './user/user-nav/user-nav.component';
 @NgModule({
   declarations: [ 
     AppComponent,
@@ -54,7 +54,8 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     SideNavBarComponent,
     LineChartComponent,
     TestComponent,
-    UserGestComponent
+    UserGestComponent,
+    UserNavComponent
   ],
   imports: [
     BrowserModule,
@@ -71,7 +72,6 @@ import {MatPaginatorModule} from '@angular/material/paginator';
     MatSnackBarModule,
     MatSidenavModule,
     MatMenuModule,
-    ChartsModule,
     MatTableModule,
     MatPaginatorModule
   ],

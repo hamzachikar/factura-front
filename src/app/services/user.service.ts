@@ -10,8 +10,10 @@ export class UserService {
   users=new BehaviorSubject<User[]>([]);
   constructor(private http:HttpClient) {}
   public getUsers(){
+    console.log('get users')
     this.http.get<User[]>(HTTP_START+'admin/getAllUsers').subscribe(res=>{
       this.users.next(res);
+      console.log(res);
     });
   }
   public saveProfile(user:User,selectedFile:File){

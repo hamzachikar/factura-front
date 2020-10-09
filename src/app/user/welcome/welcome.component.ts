@@ -30,28 +30,23 @@ export class WelcomeComponent implements OnInit {
   ngOnInit(): void {
     this.authService.user.subscribe(user=>{
       this.user=user;
-      console.log(user);
     });
     this.userService.users.subscribe(res=>{
       this.nbrUser=res.length;
-      console.log(res);
     });
     this.clientService.clients.subscribe(
       res=>{
         this.nbrClient=res.length;
-        console.log(res);
       }
     );
     this.productService.products.subscribe(
       res=>{
         this.nbrProducts=res.length;
-        console.log(res);
       }
     );
     this.devisService.devis.subscribe(
       res=>{
         this.nbrDevis=res.length;
-        console.log(res);
       }
     )
 

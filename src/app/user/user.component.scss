@@ -1,4 +1,14 @@
 .mat-drawer-container{
-    
     height: 100%;
+    .mat-drawer-content{
+        overflow:auto;
+        position: relative;
+        .navBar{
+            position: fixed;
+            right: 0 ;
+            padding: 0;
+            margin: 0;
+          
+        }
+    }
 }
