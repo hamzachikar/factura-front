@@ -1,0 +1,52 @@
+.card{
+    height: 150px;
+    margin: 5px 0 5px 0;
+    .card-body{
+        .row{
+            .col-text{
+                *{
+                    margin: 0;
+                }
+                h2{
+                    font-weight: 700;
+                    font-size: 40px;
+                    margin-bottom: 10px;
+                }
+                p{
+                    color: gray;
+                }
+            }
+            .col-icon{
+                padding: 0;
+                margin: 0;
+                .icon-c{
+                   position: relative;
+                    width: 50px;
+                    height: 50px;
+                    left: 40px;
+                   right: 40px;
+                    background-color: #EDF0F2;
+                    i{
+                        margin: 10px;
+                        color: #5179D6;
+                    }
+                }
+            }
+        }
+        
+    }
+    .card-footer{
+        .nav{
+            .nav-item{
+                .nav-link{
+                    margin: 0;
+                    padding: 0;
+                    color: #5179D6;
+                }
+                .nav-link:hover{
+                    color: #5179d6cb;
+                }
+            }
+        }
+    }
+}

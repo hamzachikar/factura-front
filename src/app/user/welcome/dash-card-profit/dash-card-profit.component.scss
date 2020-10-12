@@ -1,0 +1,65 @@
+.card{
+    height: fit-content;
+    margin: 7px 0 0 0;
+    .card-body{
+        min-height: 95px;
+        height: fit-content;
+        .row{
+            .col-text{
+                *{
+                    margin: 0;
+                }
+                h2{
+                    font-weight: 700;
+                    font-size: 30px;
+                    span{
+                        font-size: 10px;
+                        color: green;
+                    }
+                }
+                p{
+                    color: gray;
+                }
+            }
+            .col-st{
+                .st{
+                    width: fit-content;
+                    height:fit-content;
+                    float: right;
+                    border-radius: 10px;
+                   
+                    i{
+                        margin: 10px;
+                       
+                        span{
+                            margin-left: 5px;
+                            font-size: 15px;
+                            font-weight: 700;
+                        }
+                    }
+                }
+                .st-p{
+                    background-color: #BFF0DD;
+                    i{
+                        color: #75CFA4;
+                    }
+                }
+                .st-n{
+                    background-color: #F8E9EB;
+                    i{
+                        color: #E9B9C0;
+                    }
+                }
+            }
+        }
+        
+    }
+    .card-footer{
+
+        height: fit-content;
+        background-color: white;
+        border: 0;
+        padding: 0;
+        margin: 0;
+    }
+}

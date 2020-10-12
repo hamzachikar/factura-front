@@ -35,6 +35,10 @@ import { UserGestComponent } from './user/admin/user-gest/user-gest.component';
 import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import { UserNavComponent } from './user/user-nav/user-nav.component';
+import { DashCardComponent } from './user/welcome/dash-card/dash-card.component';
+import { ChartsModule } from 'ng2-charts';
+import { DashCardProfitComponent } from './user/welcome/dash-card-profit/dash-card-profit.component';
+import { DashCardProfitBarComponent } from './user/welcome/dash-card-profit-bar/dash-card-profit-bar.component';
 @NgModule({
   declarations: [ 
     AppComponent,
@@ -55,7 +59,10 @@ import { UserNavComponent } from './user/user-nav/user-nav.component';
     LineChartComponent,
     TestComponent,
     UserGestComponent,
-    UserNavComponent
+    UserNavComponent,
+    DashCardComponent,
+    DashCardProfitComponent,
+    DashCardProfitBarComponent
   ],
   imports: [
     BrowserModule,
@@ -73,7 +80,8 @@ import { UserNavComponent } from './user/user-nav/user-nav.component';
     MatSidenavModule,
     MatMenuModule,
     MatTableModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    ChartsModule
   ],
   providers: [{provide:HTTP_INTERCEPTORS,useClass:AuthIntercpetorService,multi:true}],
   bootstrap: [AppComponent]

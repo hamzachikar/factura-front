@@ -3,6 +3,10 @@
         .modal-content{
              background-color: transparent;
              border: 0;
+             align-items: center;
+             .modal-body{
+                 width: 700px;
+             }
         }
     }
 }

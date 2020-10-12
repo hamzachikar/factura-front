@@ -1,9 +1,36 @@
 .navbar{
     .nav{
+      .dropdown-menu{
+          margin: 0;
+          padding: 0;
+          border-radius: 10px;
+        .info{
+            background-color:rgb(50, 59, 71);
+            border-radius: 10px;
+            width: 205px;
+            height: fit-content;
+            padding-top: 10px;
+            padding-bottom: 5px;
+            text-align: center;
+            img{
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+            }
+            color: white;
+            h2{
+                position: relative;
+                margin-top: 10px;
+                line-height: 10px;
+            }
+        }
+      }
         .nav-item{
             
             .btn{
                 transition: 0.5s;
+                height: 45px;
+                margin-right: 10px;
                 background-color: rgb(213, 220, 225);
                 border: 1px solid transparent;
                 color: black;

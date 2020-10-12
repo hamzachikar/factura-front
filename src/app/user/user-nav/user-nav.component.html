@@ -1,23 +1,30 @@
 <nav class="navbar navbar-expand-lg navbar-light justify-content-end bg-light">
     <ul class="nav" *ngIf="user">
         <li class="nav-item dropdown ">
-            <button type="button" [matMenuTriggerFor]="menu" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                 <img *ngIf="user.avatar" [src]="transform(user.avatar)" alt="" srcset="">
 
                 <span class="name">{{splitName(user.name)}}</span>
             </button>
-            <mat-menu  #menu="matMenu">
-                <h3 class="dropdown-item disabled">{{user.name}}</h3>
+            <div class="dropdown-menu dropdown-menu-right">
+                <div class="info">
+                    <img *ngIf="user.avatar" [src]="transform(user.avatar)" alt="" srcset="">
+                    <h2 class="name">{{user.name}}</h2>
+                    <p>{{user.role}}</p>
+                </div>
+                <a style="margin-top: 10px; cursor: pointer;" class="dropdown-item" data-toggle="modal" data-target="#profile">Profile</a>
                 <div class="dropdown-divider"></div>
-                <a style="cursor: pointer;" class="dropdown-item" data-toggle="modal" data-target="#profile">Profile</a>
                 <a style="cursor: pointer;"  class="dropdown-item">Settings</a>
                 <div class="dropdown-divider"></div>
                 <a style="cursor: pointer;" class="dropdown-item" (click)="logout()">Logout</a>
-            </mat-menu>
+            </div>
            
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+            <button type="button" [matMenuTriggerFor]="menu" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                <i class="fa fa-bell" aria-hidden="true"></i>
+            </button>
+          
         </li>
        
       </ul>

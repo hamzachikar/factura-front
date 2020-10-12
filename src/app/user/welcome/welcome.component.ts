@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/auth/auth.service';
 import { AuthResponse } from 'src/app/models/authRes.model';
+import { User } from 'src/app/models/user.model';
 import { ClientService } from 'src/app/services/client.service';
 import { DevisService } from 'src/app/services/devis.service';
 import { ProductService } from 'src/app/services/product.service';
@@ -12,7 +13,14 @@ import { UserService } from 'src/app/services/user.service';
   styleUrls: ['./welcome.component.scss']
 })
 export class WelcomeComponent implements OnInit {
-  user:AuthResponse=null;
+dashCardData=[
+    {title:"products",number:32,icon:"fa fa-2x fa-shopping-cart",link:"view all products",path:"#"},
+    {title:"users",number:5,icon:"fa fa-2x fa-users",link:"view all users",path:"#"},
+    {title:"devis",number:20,icon:"fa fa-2x fa-inbox",link:"view all devis",path:"#"},
+    {title:"clients",number:100,icon:"fa fa-2x fa-shopping-cart",link:"view all clients",path:"#"}
+  ]
+dashCardStOption=["earn","client",""];
+  user:User=null;
   nbrUser:number=0;
   nbrClient:number=0;
   nbrProducts:number=0;
@@ -29,7 +37,7 @@ export class WelcomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.authService.user.subscribe(user=>{
-      this.user=user;
+      this.user=user.user;
     });
     this.userService.users.subscribe(res=>{
       this.nbrUser=res.length;

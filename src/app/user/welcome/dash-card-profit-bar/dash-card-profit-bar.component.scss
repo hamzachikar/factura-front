@@ -1,0 +1,20 @@
+.card{
+    height: fit-content;
+    margin: 10px 0 0 0;
+    .card-header{
+        height: 50px;
+        span{
+            font-weight: 500;
+            font-size: 15px;
+        }
+        .btn{
+            float: right;
+        }
+    }
+    .card-body{
+        min-height: 400px;
+    }
+    .card-footer{
+        min-height: 170px;
+    }
+}

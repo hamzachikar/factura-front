@@ -1,8 +1,37 @@
-<div class="container-fluid">
+<div class="container">
     <div class="row titleRow">
         <div class="col">
-            <h2>Dashboard</h2>
+            <h1>Dashboard</h1>
+            <h2>Hi <img src="../../../assets/images/hand.svg" alt="" srcset=""><span>  {{user.name}}</span></h2>
         </div>
     </div>
- 
+    <div class="row dash">
+        <div class="col  dash-content">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-xl-4  dash-card">
+                <div class="col" *ngFor="let dCard of dashCardData">
+                    <dash-card
+                        [title]="dCard.title"
+                        [number]="dCard.number"
+                        [link]="dCard.link"
+                        [icon]="dCard.icon"
+                        [path]="dCard.path"
+                    ></dash-card>
+                </div>
+              
+            </div>
+            <div class="row  row-cols-1 row-cols-sm-2 row-cols-md-4 dash-stats">
+                <div class="col col-md-8 dash-statics">
+                  <dash-card-profit-bar></dash-card-profit-bar>
+                </div>
+                <div class="col col-md-4 dash-profits">
+                    <div class="row row-card" *ngFor="let opt of dashCardStOption">
+                        <div class="col">
+                            <dash-card-profit [cardOption]="opt" ></dash-card-profit>
+                        </div>       
+                    </div>
+                  
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

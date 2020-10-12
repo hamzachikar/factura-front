@@ -1,0 +1,30 @@
+<div class="card">
+    <div class="card-body">
+        <div class="row">
+            <div class="col col-text">
+                <h2>{{number}} <span>MAD</span></h2>
+                <p>Total {{cardOption}}</p>
+            </div>
+            <div class="col col-st">
+                <div *ngIf="stats" class="st st-p">
+                    <i class="fa fa-caret-up" aria-hidden="true"><span>{{percent}}%</span></i>
+                </div>
+                <div *ngIf="!stats" class="st st-n">
+                    <i class="fa fa-caret-down" aria-hidden="true"><span>{{percent}}%</span></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card-footer">
+        <div style="height: fit-content;display: block">
+            <canvas baseChart 
+                    [datasets]="lineChartData" 
+                    [labels]="lineChartLabels" 
+                    [options]="lineChartOptions"
+                    [colors]="lineChartColors" 
+                    [chartType]="lineChartType" 
+                    [plugins]="lineChartPlugins">
+            </canvas>
+          </div>        
+    </div>
+  </div>
