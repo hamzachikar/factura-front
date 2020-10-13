@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ChartOptions, ChartType, ChartDataSets } from 'chart.js';
 import { Label } from 'ng2-charts';
+import { Devis } from 'src/app/models/devis.model';
+import { DevisService } from 'src/app/services/devis.service';
 
 @Component({
   selector: 'dash-card-profit-bar',
@@ -8,6 +10,7 @@ import { Label } from 'ng2-charts';
   styleUrls: ['./dash-card-profit-bar.component.scss']
 })
 export class DashCardProfitBarComponent implements OnInit {
+  devis:Devis[]=[];
   public barChartOptions: ChartOptions = {
     responsive: true,
     // We use these empty structures as placeholders for dynamic theming.
@@ -18,6 +21,7 @@ export class DashCardProfitBarComponent implements OnInit {
         }
       }],
       yAxes:[{
+        display: false,
         gridLines: {
           display: false
         }
@@ -31,42 +35,58 @@ export class DashCardProfitBarComponent implements OnInit {
       }
     }
   };
-  public barChartLabels: Label[] = ['2006', '2007', '2008', '2009', '2010', '2011', '2012'];
+  public barChartLabels: Label[] = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul','Aug','Sep','oct','Nov','Dec'];
   public barChartType: ChartType = 'bar';
   public barChartLegend = true;
   public barChartData: ChartDataSets[] = [
     { 
-      data: [65, 59, 80, 81, 56, 55, 40],
-      label: 'Series A',
-      backgroundColor:"#7D9BE0",
-      hoverBackgroundColor:"#7D9BE0",
-      borderColor:"#7D9BE0",
-      hoverBorderColor:"#7D9BE0"
+      data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      label: 'Earn',
+      backgroundColor:"#46C37B",
+      hoverBackgroundColor:"#46C37B",
+      borderColor:"#46C37B",
+      hoverBorderColor:"#46C37B"
     },
     { 
-      data: [28, 48, 40, 19, 86, 27, 90],
-      label: 'Series B',
-      backgroundColor:"#CDDAF8" ,
-      hoverBackgroundColor:"#CDDAF8",
-      borderColor:"#CDDAF8",
-      hoverBorderColor:"#CDDAF8"
+      data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+      label: 'Dept',
+      backgroundColor:"#E9B9C0" ,
+      hoverBackgroundColor:"#E9B9C0",
+      borderColor:"#E9B9C0",
+      hoverBorderColor:"#E9B9C0"
     }
   ];
 
 
-  constructor() { }
+  constructor(private devisService:DevisService) {
+    
+  }
 
   ngOnInit(): void {
+    this.devisService.devis.subscribe(devis=>{
+      this.devis=devis;
+      this.setDataBarChart();
+    })
+  }
+  setDataBarChart(){
+    console.log(this.devis.length)
+    let dataEarn=[0,0,0,0,0,0,0,0,0,3000,0,0];
+    let dataDept=[0,0,0,0,0,0,0,0,0,0,0,0];
+      for(let d of this.devis){
+        if(d.status==="valide"){
+          let date=new Date(d.createDate);
+          dataEarn[date.getMonth()]=+d.totalTTC;
+        }
+        if(d.status==="en attente"){
+          let date=new Date(d.createDate);
+          dataDept[date.getMonth()]=+d.totalTTC;
+        }
+      }
+      this.barChartData[0].data=dataEarn
+      this.barChartData[1].data=dataDept
   }
   public randomize(): void {
-    // Only Change 3 values
-    this.barChartData[0].data = [
-      Math.round(Math.random() * 100),
-      59,
-      80,
-      (Math.random() * 100),
-      56,
-      (Math.random() * 100),
-      40 ];
+   this.setDataBarChart();
   }
+
 }

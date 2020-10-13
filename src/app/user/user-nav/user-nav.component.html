@@ -3,12 +3,13 @@
         <li class="nav-item dropdown ">
             <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                 <img *ngIf="user.avatar" [src]="transform(user.avatar)" alt="" srcset="">
-
+                <img *ngIf="!user.avatar" src="../../../assets/images/user.png">
                 <span class="name">{{splitName(user.name)}}</span>
             </button>
             <div class="dropdown-menu dropdown-menu-right">
                 <div class="info">
                     <img *ngIf="user.avatar" [src]="transform(user.avatar)" alt="" srcset="">
+                    <img *ngIf="!user.avatar" src="../../../assets/images/user.png">
                     <h2 class="name">{{user.name}}</h2>
                     <p>{{user.role}}</p>
                 </div>
@@ -21,7 +22,7 @@
            
         </li>
         <li class="nav-item">
-            <button type="button" [matMenuTriggerFor]="menu" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+            <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                 <i class="fa fa-bell" aria-hidden="true"></i>
             </button>
           

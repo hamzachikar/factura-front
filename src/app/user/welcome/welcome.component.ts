@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/auth/auth.service';
-import { AuthResponse } from 'src/app/models/authRes.model';
 import { User } from 'src/app/models/user.model';
 import { ClientService } from 'src/app/services/client.service';
 import { DevisService } from 'src/app/services/devis.service';
@@ -13,18 +12,15 @@ import { UserService } from 'src/app/services/user.service';
   styleUrls: ['./welcome.component.scss']
 })
 export class WelcomeComponent implements OnInit {
+  user:User=null;
 dashCardData=[
-    {title:"products",number:32,icon:"fa fa-2x fa-shopping-cart",link:"view all products",path:"#"},
-    {title:"users",number:5,icon:"fa fa-2x fa-users",link:"view all users",path:"#"},
-    {title:"devis",number:20,icon:"fa fa-2x fa-inbox",link:"view all devis",path:"#"},
-    {title:"clients",number:100,icon:"fa fa-2x fa-shopping-cart",link:"view all clients",path:"#"}
+    {title:"products",number:0,icon:"fa fa-2x fa-shopping-cart",link:"view all products",path:"#"},
+    {title:"users",number:0,icon:"fa fa-2x fa-users",link:"view all users",path:"#"},
+    {title:"devis",number:0,icon:"fa fa-2x fa-inbox",link:"view all devis",path:"#"},
+    {title:"clients",number:0,icon:"fa fa-2x fa-address-book-o",link:"view all clients",path:"#"}
   ]
 dashCardStOption=["earn","client",""];
-  user:User=null;
-  nbrUser:number=0;
-  nbrClient:number=0;
-  nbrProducts:number=0;
-  nbrDevis:number=0;
+  
   constructor(
     private authService:AuthService,
     private userService:UserService,
@@ -40,21 +36,21 @@ dashCardStOption=["earn","client",""];
       this.user=user.user;
     });
     this.userService.users.subscribe(res=>{
-      this.nbrUser=res.length;
+      this.dashCardData[1].number=res.length;
     });
     this.clientService.clients.subscribe(
       res=>{
-        this.nbrClient=res.length;
+        this.dashCardData[3].number=res.length;
       }
     );
     this.productService.products.subscribe(
       res=>{
-        this.nbrProducts=res.length;
+        this.dashCardData[0].number=res.length;
       }
     );
     this.devisService.devis.subscribe(
       res=>{
-        this.nbrDevis=res.length;
+        this.dashCardData[2].number=res.length;
       }
     )
 
