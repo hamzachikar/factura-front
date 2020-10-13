@@ -1,82 +1,57 @@
-@font-face{
-    font-family: 'Raleway-semiBold';
-    src: url(../../../../assets/fonts/Raleway-SemiBold.ttf);
-}
-@font-face{
-    font-family: 'Raleway-medium';
-    src: url(../../../../assets/fonts/Raleway-Medium.ttf);
-}
-.container{
-    margin-top: 50px;
-    .row{
-        margin: 0;
-        padding: 0;
-    }
-   
-    .rowService{
-        width: 100%;
-        margin-top:50px ;
-        .col{
-            min-height: 200px;
-            height: fit-content;
-            margin-bottom: 50px;
-            .card{
-                position: relative;
-                transform: 1s;
-                width: 100%;
-                height: fit-content;
-                min-height: 90%;
+.card{
+    position: relative;
+    transform: 1s;
+    width: 100%;
+    height: fit-content;
+    min-height: 90%;
+    margin: 0;
+    padding: 0;
+    -webkit-box-shadow:0 10px 70px rgba(0, 0, 0, 0.459), 0 0 1px rgba(255, 255, 255, 0.514) inset;
+    -moz-box-shadow:0 10px 70px rgba(255, 255, 255, 0.459), 0 0 1px rgba(255, 255, 255, 0.514) inset;
+     box-shadow:0 10px 50px rgba(0, 0, 0, 0.459), 0 0 0 rgba(255, 255, 255, 0.514) inset;
+     .card-body{
+         .rowContent{
+             height: 100%;
+             .col{
                 margin: 0;
                 padding: 0;
-                -webkit-box-shadow:0 10px 70px rgba(0, 0, 0, 0.459), 0 0 1px rgba(255, 255, 255, 0.514) inset;
-                -moz-box-shadow:0 10px 70px rgba(255, 255, 255, 0.459), 0 0 1px rgba(255, 255, 255, 0.514) inset;
-                 box-shadow:0 10px 50px rgba(0, 0, 0, 0.459), 0 0 0 rgba(255, 255, 255, 0.514) inset;
-                 .card-body{
-                     .rowContent{
-                         height: 100%;
-                         .col{
-                            margin: 0;
-                            padding: 0;
-                             height: fit-content;
-                             text-align: left;
-                             i{
-                                transition: 1s;
-                                 font-weight: 500;
-                                 color: gray;
-                             }
-                             h1{
-                                transition: 1s;
-                                 font-family:'Raleway-semiBold';
-                                 color: rgba(0, 0, 0, 0.61);
-                             }
-                             p{
-                                font-family: 'Raleway-medium';
-                             }
-                         }
-                     }
+                 height: fit-content;
+                 text-align: left;
+                 i{
+                    transition: 1s;
+                     font-weight: 500;
+                     color: gray;
                  }
-            }
-            .card:hover{
-                transform: 0.5s;
-                -webkit-box-shadow:0 20px 70px rgba(0, 0, 0, 0.459), 0 0 1px rgba(255, 255, 255, 0.514) inset;
-                -moz-box-shadow:0 20px 70px rgba(255, 255, 255, 0.459), 0 0 1px rgba(255, 255, 255, 0.514) inset;
-                 box-shadow:0 20px 70px rgba(0, 0, 0, 0.459), 0 0 0 rgba(255, 255, 255, 0.514) inset;
-                 .card-body{
-                     .rowContent{
-                         .col{
-                             i{
-                                 transition: 1s;
-                               color:rgb(149, 193, 71);
-                             }
-                             h1{
-                                transition: 0.5s;
-                                 color:rgb(149, 193, 71);
-                             }
-                            
-                         }
-                     }
+                 h1{
+                    transition: 1s;
+                     font-family:'Raleway-semiBold';
+                     color: rgba(0, 0, 0, 0.61);
                  }
-            }
-        }
-    }
+                 p{
+                    font-family: 'Raleway-medium';
+                 }
+             }
+         }
+     }
+}
+.card:hover{
+    transform: 0.5s;
+    -webkit-box-shadow:0 20px 70px rgba(0, 0, 0, 0.459), 0 0 1px rgba(255, 255, 255, 0.514) inset;
+    -moz-box-shadow:0 20px 70px rgba(255, 255, 255, 0.459), 0 0 1px rgba(255, 255, 255, 0.514) inset;
+     box-shadow:0 20px 70px rgba(0, 0, 0, 0.459), 0 0 0 rgba(255, 255, 255, 0.514) inset;
+     .card-body{
+         .rowContent{
+             .col{
+                 i{
+                     transition: 1s;
+                   color:rgb(149, 193, 71);
+                 }
+                 h1{
+                    transition: 0.5s;
+                     color:rgb(149, 193, 71);
+                 }
+                
+             }
+         }
+     }
 }

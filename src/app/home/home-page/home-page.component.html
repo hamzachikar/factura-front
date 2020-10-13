@@ -31,7 +31,17 @@
         </div>
         <div class="row serviceSection">
             <div class="col">
-                <services></services>
+                <div class="container">
+                    <div class="row rowService row-cols-1 row-cols-lg-1 ">
+                        <div class="col col-lg-6" *ngFor="let service of services">
+                          <services
+                            [icon]="service.icon"
+                            [title]="service.title"
+                            [content]="service.content"
+                          ></services>
+                        </div>
+                    </div>
+                  </div>   
             </div>
          
         </div>

@@ -108,6 +108,26 @@
     .serviceSection{
         position: relative;
        height: fit-content;
+       .col{
+        .container{
+            margin-top: 50px;
+            .row{
+                margin: 0;
+                padding: 0;
+            }
+           
+            .rowService{
+                width: 100%;
+                margin-top:50px ;
+                .col{
+                    min-height: 200px;
+                    height: fit-content;
+                    margin-bottom: 50px;
+                    
+                }
+            }
+        }
+       }
     }
    
 }

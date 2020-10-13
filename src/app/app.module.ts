@@ -39,6 +39,7 @@ import { DashCardComponent } from './user/welcome/dash-card/dash-card.component'
 import { ChartsModule } from 'ng2-charts';
 import { DashCardProfitComponent } from './user/welcome/dash-card-profit/dash-card-profit.component';
 import { DashCardProfitBarComponent } from './user/welcome/dash-card-profit-bar/dash-card-profit-bar.component';
+import { MissionsComponent } from './home/service-page/missions/missions.component';
 @NgModule({
   declarations: [ 
     AppComponent,
@@ -62,7 +63,8 @@ import { DashCardProfitBarComponent } from './user/welcome/dash-card-profit-bar/
     UserNavComponent,
     DashCardComponent,
     DashCardProfitComponent,
-    DashCardProfitBarComponent
+    DashCardProfitBarComponent,
+    MissionsComponent
   ],
   imports: [
     BrowserModule,

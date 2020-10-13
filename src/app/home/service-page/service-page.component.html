@@ -7,7 +7,17 @@
     </div>
     <div class="row serviceCard justify-content-center">
         <div class="col">
-            <services></services>
+          <div class="container">
+            <div class="row rowService row-cols-1 row-cols-lg-1 ">
+                <div class="col col-lg-6" *ngFor="let service of services">
+                  <services
+                    [icon]="service.icon"
+                    [title]="service.title"
+                    [content]="service.content"
+                  ></services>
+                </div>
+            </div>
+          </div>   
         </div>
     </div>
     <div class="row justify-content-center featureTitle">
@@ -19,43 +29,13 @@
             <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
            </div>
            <div class="row featureCard justify-content-center row-cols-1 row-cols-md-6" >
-            <div class="col-md-6 cardContainer align-items-stretch ">
-                <div class="card">
-                  <div class="card-body">
-                    <h5 class="card-title">Our Mission</h5>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et dolore magna aliqua.</p>
-                    <div class="read-more"><a href="#"><i class="fa fa-arrow-right"></i> Read More</a></div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6 cardContainer align-items-stretch " >
-                <div class="card">
-                  <div class="card-body">
-                    <h5 class="card-title">Our Mission</h5>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et dolore magna aliqua.</p>
-                    <div class="read-more"><a href="#"><i class="fa fa-arrow-right"></i> Read More</a></div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6 cardContainer align-items-stretch">
-                <div class="card">
-                  <div class="card-body">
-                    <h5 class="card-title">Our Mission</h5>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et dolore magna aliqua.</p>
-                    <div class="read-more"><a href="#"><i class="fa fa-arrow-right"></i> Read More</a></div>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6 cardContainer align-items-stretch " >
-                <div class="card">
-                  <div class="card-body">
-                    <h5 class="card-title">Our Mission</h5>
-                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et dolore magna aliqua.</p>
-                    <div class="read-more"><a href="#"><i class="fa fa-arrow-right"></i> Read More</a></div>
-                  </div>
-                </div>
-              </div>
-              
+            <div class="col-md-6 cardContainer align-items-stretch " *ngFor="let mission of missions">
+              <missions
+                [title]="mission.title"
+                [content]="mission.content"
+              ></missions>   
+            </div>
+             
            </div>
        </div>
    </div>
