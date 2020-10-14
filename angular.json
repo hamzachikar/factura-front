@@ -36,14 +36,14 @@
               "src/styles.scss",
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "node_modules/chart.js/dist/Chart.min.css",
-              "node_modules/aos/dist/aos.css"
+              "node_modules/wowjs/css/libs/animate.css"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
               "node_modules/bootstrap/dist/js/bootstrap.min.js",
               "node_modules/chart.js/dist/Chart.min.js",
               "node_modules/chart.js/dist/Chart.bundle.min.js",
-              "node_modules/aos/dist/aos.js"
+              "node_modules/wowjs/dist/wow.js"
             ]
           },
           "configurations": {
@@ -107,8 +107,8 @@
             ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "node_modules/aos/dist/aos.css",
               "node_modules/chart.js/dist/Chart.min.css",
+              "node_modules/wowjs/css/libs/animate.css",
               "src/styles.scss"
             ],
             "scripts": [
@@ -116,7 +116,7 @@
               "node_modules/bootstrap/dist/js/bootstrap.min.js",
               "node_modules/chart.js/dist/Chart.min.js",
               "node_modules/chart.js/dist/Chart.bundle.min.js",
-              "node_modules/aos/dist/aos.js"
+              "node_modules/wowjs/dist/wow.js"
             ]
           }
         },

@@ -42,18 +42,18 @@ export class DashCardProfitBarComponent implements OnInit {
     { 
       data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
       label: 'Earn',
-      backgroundColor:"#46C37B",
-      hoverBackgroundColor:"#46C37B",
-      borderColor:"#46C37B",
-      hoverBorderColor:"#46C37B"
+      backgroundColor:"#7D9BE0",
+      hoverBackgroundColor:"#2626ff",
+      borderColor:"#7D9BE0",
+      hoverBorderColor:"#2626ff"
     },
     { 
       data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
       label: 'Dept',
-      backgroundColor:"#E9B9C0" ,
-      hoverBackgroundColor:"#E9B9C0",
-      borderColor:"#E9B9C0",
-      hoverBorderColor:"#E9B9C0"
+      backgroundColor:"#D3DDF5" ,
+      hoverBackgroundColor:"#8c8cff",
+      borderColor:"#D3DDF5",
+      hoverBorderColor:"#8c8cff"
     }
   ];
 

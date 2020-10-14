@@ -1,5 +1,5 @@
 import { Component, ElementRef, OnDestroy, OnInit, ViewChild } from '@angular/core';
-import * as AOS from 'aos';
+import { NgwWowService } from 'ngx-wow';
 
 @Component({
   selector: 'app-home',
@@ -8,13 +8,12 @@ import * as AOS from 'aos';
 })
 export class HomeComponent implements OnInit,OnDestroy {
   @ViewChild('body') private myScrollContainer: ElementRef;
-  constructor() { }
+  constructor( private wowService: NgwWowService) { }
   ngOnDestroy(): void {
-    
   }
 
   ngOnInit(): void {
-    //AOS.init();
+    this.wowService.init();
   }
  
   scrollDown(){

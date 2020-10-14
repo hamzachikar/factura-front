@@ -33,7 +33,12 @@ dashCardStOption=["earn","client",""];
 
   ngOnInit(): void {
     this.authService.user.subscribe(user=>{
-      this.user=user.user;
+      if(user){
+        this.user=user.user;
+      }
+     else{
+       this.user=null;
+     }
     });
     this.userService.users.subscribe(res=>{
       this.dashCardData[1].number=res.length;

@@ -9,6 +9,7 @@ import { ClientService } from '../services/client.service';
 import { UserService } from '../services/user.service';
 import { ProductService } from '../services/product.service';
 import { DevisService } from '../services/devis.service';
+import { LogUserService} from '../services/log-user-service.service';
 
 @Injectable({providedIn:'root'})
 export class AuthService{
@@ -21,13 +22,15 @@ export class AuthService{
         private clientService:ClientService,
         private userService:UserService,
         private productService:ProductService,
-        private devisService:DevisService
+        private devisService:DevisService,
+        private logService:LogUserService
         ){}
     private loadAuthUserData(){
         this.userService.getUsers();
         this.clientService.getClients();
         this.productService.getProducts();
-        this.devisService.getDevis()
+        this.devisService.getDevis();
+        this.logService.getLogsUsers();
     }
     logout(){
         this.user.next(null);

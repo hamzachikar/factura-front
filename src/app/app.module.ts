@@ -40,6 +40,8 @@ import { ChartsModule } from 'ng2-charts';
 import { DashCardProfitComponent } from './user/welcome/dash-card-profit/dash-card-profit.component';
 import { DashCardProfitBarComponent } from './user/welcome/dash-card-profit-bar/dash-card-profit-bar.component';
 import { MissionsComponent } from './home/service-page/missions/missions.component';
+import { NgwWowModule } from 'ngx-wow';
+import { TableLogComponent } from './user/welcome/table-log/table-log.component';
 @NgModule({
   declarations: [ 
     AppComponent,
@@ -64,7 +66,8 @@ import { MissionsComponent } from './home/service-page/missions/missions.compone
     DashCardComponent,
     DashCardProfitComponent,
     DashCardProfitBarComponent,
-    MissionsComponent
+    MissionsComponent,
+    TableLogComponent
   ],
   imports: [
     BrowserModule,
@@ -83,7 +86,8 @@ import { MissionsComponent } from './home/service-page/missions/missions.compone
     MatMenuModule,
     MatTableModule,
     MatPaginatorModule,
-    ChartsModule
+    ChartsModule,
+    NgwWowModule
   ],
   providers: [{provide:HTTP_INTERCEPTORS,useClass:AuthIntercpetorService,multi:true}],
   bootstrap: [AppComponent]
