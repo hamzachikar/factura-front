@@ -28,7 +28,7 @@
             align-items: center;
             top: 30%;
             h1{
-                
+
                 height: fit-content;
                 line-height: 60px;
                 font-family:'Raleway-semiBold';
@@ -55,7 +55,7 @@
         height:fit-content;
     }
     .signUpSection{
-        
+
         background-color: rgb(149, 193, 71);
         min-height: 300px;
         margin-bottom: 50px;
@@ -65,8 +65,10 @@
             top: 15%;
             height: 100px;
             h1{
-                
+              position: relative;
                 height: fit-content;
+                width:50%;
+                left: 25%;
                 line-height: 60px;
                 font-family:'Raleway-semiBold';
                 font-size: 50px;
@@ -115,7 +117,7 @@
                 margin: 0;
                 padding: 0;
             }
-           
+
             .rowService{
                 width: 100%;
                 margin-top:50px ;
@@ -123,11 +125,11 @@
                     min-height: 200px;
                     height: fit-content;
                     margin-bottom: 50px;
-                    
+
                 }
             }
         }
        }
     }
-   
+
 }

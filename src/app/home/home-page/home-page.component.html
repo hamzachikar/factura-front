@@ -12,16 +12,16 @@
         </div>
     </div>
     <div class="row" style="position: relative; top: -100px;">
-        <div class="row aboutSection justify-content-center wow fadeInUp" data-wow-delay="0.5s">
+        <div class="row aboutSection justify-content-center ">
             <div class="col">
                 <about></about>
             </div>
         </div>
         <div class="row signUpSection justify-content-center ">
-            <div class="col">
-                <h1>Free Trial</h1>
-                <p >we give you a 3 months free trial to test our services</p>
-                <button type="button" class="btn btn-lg btn-outline-light">Join us now</button>
+            <div class="col justify-content-center">
+                <h1  class="wow pulse" data-wow-iteration="10">Free Trial</h1>
+                <p  class="wow fadeInUp" data-wow-delay="0.7s">we give you a 3 months free trial to test our services</p>
+                <button type="button" class="btn btn-lg btn-outline-light wow fadeInUp"  data-wow-delay="0.7s">Join us now</button>
             </div>
         </div>
         <div class="row serviceTitle justify-content-center ">
@@ -33,7 +33,7 @@
             <div class="col">
                 <div class="container">
                     <div class="row rowService row-cols-1 row-cols-lg-1 ">
-                        <div class="col col-lg-6" *ngFor="let service of services">
+                        <div class="col col-lg-6"  *ngFor="let service of services">
                           <services
                             [icon]="service.icon"
                             [title]="service.title"
@@ -41,10 +41,10 @@
                           ></services>
                         </div>
                     </div>
-                  </div>   
+                  </div>
             </div>
-         
+
         </div>
     </div>
-    
+
 </div>
