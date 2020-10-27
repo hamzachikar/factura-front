@@ -19,7 +19,7 @@
           "options": {
             "allowedCommonJsDependencies": [
               "lodash"
-              ],
+            ],
             "outputPath": "dist/gestion-Facture-front",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -143,6 +143,14 @@
             "production": {
               "devServerTarget": "gestion-Facture-front:serve:production"
             }
+          }
+        },
+        "deploy": {
+          "builder": "@netlify-builder/deploy:deploy",
+          "options": {
+            "outputPath": "dist/gestion-Facture-front",
+            "netlifyToken": "1ScC-CXyryYy2uZrHLhJSV1yGKpd6N9XB-FlDZ_FWMo",
+            "siteId": "5c53f225-838e-4d8c-9410-53ddd8ffb122"
           }
         }
       }
