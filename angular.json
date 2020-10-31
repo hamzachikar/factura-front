@@ -29,6 +29,7 @@
             "assets": [
               "src/favicon.ico",
               "src/assets",
+              "src/_redirects",
               "src/assets/fonts",
               "src/assets/images"
             ],
@@ -103,6 +104,7 @@
             "karmaConfig": "karma.conf.js",
             "assets": [
               "src/favicon.ico",
+              "src/_redirects",
               "src/assets"
             ],
             "styles": [
